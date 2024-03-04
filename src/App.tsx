@@ -2,8 +2,21 @@ import React, {useEffect, useState} from 'react';
 import './App.css';
 import QRCode from "react-qr-code";
 
+type CryptoType =  'eth' | 'btc' | 'bnb'
+    |'trx'
+    |'bch'
+    |'ltc'
+    |'zec'
+    |'qtum'
+    |'btg'
+    |'usdt'
+    |'usdt_trc20'
+    |'usdc'
+    |'busd'
+    |'bscusd'
+
 type ObjType = {
-    [key: string]: string
+    [CryptoType: string]: string
 }
 
 // const currencies = {
@@ -23,7 +36,7 @@ type ObjType = {
 //     bscusd: 'binance:0xf3D4B12f8FFB74e12ec0bC1F6F5e3fcF64A8b5a5?amount=123.01'
 // }
 
-const currencies2 = {
+const currencies2 :ObjType = {
     eth: 'ethereum:0xeE5F108cfe252d49126d76A8136e8755D79c9E17@1?value=123.01e18',//+
     btc: 'bitcoin:1MJybmdee9LkEzWXKFZHrKpZTTmkxNtS8H?amount=123.01&label=btc',//+
     bnb: 'binance:0x03F818e6ecc5300c0002D165336F4849Df346BF4?amount=123.01',//+
@@ -89,14 +102,13 @@ function App() {
     const handleChange = (e: any) => {
         console.log(e.target.value)
         console.log(e.currentTarget.value)
-        setValue2(e.target.value)
+            // setValue2(e.target.value)
     }
 
     // @ts-ignore
     // @ts-ignore
     return (
         <div className="App" style={{
-            height: "100%",
             flexDirection: 'column',
             gap: 24,
             display: "flex",
@@ -119,22 +131,38 @@ function App() {
             {/*        return <option value={currencies[key]}>{key}</option>*/}
             {/*    })}*/}
             {/*</select>*/}
-            2.{currencies2[value2]}
-            <div style={{height: "auto", margin: "0 auto", maxWidth: 400, width: "100%"}}>
+            {/*2.{currencies2[value2]}*/}
+            {/*<div style={{height: "auto", margin: "0 auto", maxWidth: 400, width: "100%"}}>*/}
 
-                <QRCode
-                    size={500}
-                    style={{height: "auto", maxWidth: "100%", width: "100%"}}
-                    value={currencies2[value2]}
-                    viewBox={`0 0 500 500`}
-                />
-            </div>
-            <select onChange={handleChange} value={value2}>
+            {/*    <QRCode*/}
+            {/*        size={500}*/}
+            {/*        style={{height: "auto", maxWidth: "100%", width: "100%"}}*/}
+            {/*        value={currencies2[value2]}*/}
+            {/*        viewBox={`0 0 500 500`}*/}
+            {/*    />*/}
+            {/*</div>*/}
+            {/*<select onChange={handleChange} value={value2}>*/}
+            {/*    {Object.keys(currencies2).map(key => {*/}
+            {/*        // @ts-ignore*/}
+            {/*        return <option key={key} name={key} value={key}>{key}</option>*/}
+            {/*    })}*/}
+            {/*</select>*/}
+            {/*2.{currencies2[value2]}*/}
+            <div style={{margin: "0 auto", maxWidth: 600, width: "100%"}}>
                 {Object.keys(currencies2).map(key => {
                     // @ts-ignore
-                    return <option key={key} name={key} value={key}>{key}</option>
+                    return  <div style={{padding:'100px'}}>
+                        <QRCode
+                            size={600}
+                            style={{height: "auto", maxWidth: "100%", width: "100%"}}
+                            value={currencies2[key]}
+                            viewBox={`0 0 500 500`}
+                        />
+                        <p>{key}</p>
+                        <p>{currencies2[key]}</p>
+                    </div>
                 })}
-            </select>
+            </div>
             {/*3.{value3}*/}
             {/*<div style={{height: "auto", margin: "0 auto", maxWidth: 64, width: "100%"}}>*/}
 
