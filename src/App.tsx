@@ -2,6 +2,10 @@ import React, {useEffect, useState} from 'react';
 import './App.css';
 import QRCode from "react-qr-code";
 
+type ObjType = {
+    [key: string]: string
+}
+
 // const currencies = {
 //     eth: 'ethereum:0x52f81E81fe7dA6fA2C20E270FBaB2Fe3131cbC85?amount=123.01',
 //     btc: 'bitcoin:bc1q7xgg5tlumsqqzeagwup8urcfvaaex0r9rzd9w5?amount=123.01',
@@ -82,8 +86,23 @@ function App() {
     const [value3, setValue3] = useState('')
     const [value4, setValue4] = useState('')
 
+    const handleChange = (e: any) => {
+        console.log(e.target.value)
+        console.log(e.currentTarget.value)
+        setValue2(e.target.value)
+    }
+
+    // @ts-ignore
+    // @ts-ignore
     return (
-        <div className="App" style={{height: "100%", flexDirection: 'column', gap: 24, display: "flex", alignItems: 'center', justifyContent: "center"}}>
+        <div className="App" style={{
+            height: "100%",
+            flexDirection: 'column',
+            gap: 24,
+            display: "flex",
+            alignItems: 'center',
+            justifyContent: "center"
+        }}>
             {/*1.{value}*/}
             {/*<div style={{height: "auto", margin: "0 auto", maxWidth: 64, width: "100%"}}>*/}
 
@@ -100,20 +119,20 @@ function App() {
             {/*        return <option value={currencies[key]}>{key}</option>*/}
             {/*    })}*/}
             {/*</select>*/}
-            2.{value2}
+            2.{currencies2[value2]}
             <div style={{height: "auto", margin: "0 auto", maxWidth: 400, width: "100%"}}>
 
                 <QRCode
                     size={500}
                     style={{height: "auto", maxWidth: "100%", width: "100%"}}
-                    value={value2}
+                    value={currencies2[value2]}
                     viewBox={`0 0 500 500`}
                 />
             </div>
-            <select onChange={e => setValue2(e.target.value)} value={value2} >
+            <select onChange={handleChange} value={value2}>
                 {Object.keys(currencies2).map(key => {
-                   // @ts-ignore
-                    return <option value={currencies2[key]}>{key}</option>
+                    // @ts-ignore
+                    return <option key={key} name={key} value={key}>{key}</option>
                 })}
             </select>
             {/*3.{value3}*/}
