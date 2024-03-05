@@ -48,7 +48,7 @@ const currencies2 :ObjType = {
     dash: 'dash:XhzNPfqoyG96c5QagQuJsJpW2PbL7wFkT5?amount=123.01',
     btg: 'bitcoingold:GbzhyxiaiXqWiTx5fVcQaN2VVmK9QM3fyN?amount=123.01&label=btg',
     usdt: '0xeE5F108cfe252d49126d76A8136e8755D79c9E17?amount=123.01',
-    usdt_trc20: 'trx:TU7pdJvYiyPgdd7RUiUi8i5uhzF2FwquoK?amount=123.01',
+    usdt_trc20: 'tron:TU7pdJvYiyPgdd7RUiUi8i5uhzF2FwquoK?amount=123.01',
     usdc: '0xeE5F108cfe252d49126d76A8136e8755D79c9E17?amount=123.01',
     busd: 'binance:0x03F818e6ecc5300c0002D165336F4849Df346BF4?amount==123.01',
     bscusd: 'binance:0x03F818e6ecc5300c0002D165336F4849Df346BF4?amount=123.01'
