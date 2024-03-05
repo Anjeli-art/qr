@@ -52,9 +52,9 @@ const currencies2: ObjType = {
   usdt: "0xeE5F108cfe252d49126d76A8136e8755D79c9E17?amount=123.01",
   usdt_trc20: "tron:TU7pdJvYiyPgdd7RUiUi8i5uhzF2FwquoK?amount=123.01",
   usdc: "0xeE5F108cfe252d49126d76A8136e8755D79c9E17?amount=123.01",
-  bnb: "0x03F818e6ecc5300c0002D165336F4849Df346BF4?amount=123.01", //+
-  busd: "0x03F818e6ecc5300c0002D165336F4849Df346BF4?amount=123.01",
-  bscusd: "0x03F818e6ecc5300c0002D165336F4849Df346BF4?amount=123.01",
+  bnb: "bnb1r8vaq3l5pddgx65es9j5qkvk0guzh55awwnqa3", //+
+  busd: "0xFB080273Be719a4fe8CFceB3e8a758aE4ee1aa99",
+  bscusd: "0xa9726B663A486528D0600800A16E68012e3F7d8f",
 };
 
 // const currencies3 = {
