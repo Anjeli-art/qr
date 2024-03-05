@@ -52,10 +52,9 @@ const currencies2: ObjType = {
   usdt: "0xeE5F108cfe252d49126d76A8136e8755D79c9E17?amount=123.01",
   usdt_trc20: "tron:TU7pdJvYiyPgdd7RUiUi8i5uhzF2FwquoK?amount=123.01",
   usdc: "0xeE5F108cfe252d49126d76A8136e8755D79c9E17?amount=123.01",
-  bnb: "ethereum:0x03F818e6ecc5300c0002D165336F4849Df346BF4@56?value=123.01e18", //+
-  busd: "ethereum:0x03F818e6ecc5300c0002D165336F4849Df346BF4@56?value=123.01e18",
-  bscusd:
-    "ethereum:0x03F818e6ecc5300c0002D165336F4849Df346BF4@56?value=123.01e18",
+  bnb: "bsc:0x03F818e6ecc5300c0002D165336F4849Df346BF4@56?value=123.01e18", //+
+  busd: "bsc:0x03F818e6ecc5300c0002D165336F4849Df346BF4@56?value=123.01e18",
+  bscusd: "bsc:0x03F818e6ecc5300c0002D165336F4849Df346BF4@56?value=123.01e18",
 };
 
 // const currencies3 = {
